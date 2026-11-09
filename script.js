@@ -1,3 +1,8 @@
+// Normalizza URL canonico se si accede a /index.html
+if (window.location.pathname === '/index.html') {
+    window.history.replaceState(null, '', '/' + window.location.search + window.location.hash);
+}
+
 // Aspetta che il DOM sia completamente caricato
 document.addEventListener('DOMContentLoaded', function() {
     

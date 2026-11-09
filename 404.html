@@ -6,28 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Non Trovata | Le Api di Rospocchia</title>
     <meta name="description" content="Errore 404 - Questa pagina non esiste. Torna alla home de Le Api di Rospocchia.">
-    <meta name="robots" content="noindex">
-    <link rel="stylesheet" href="style.css">
+    <meta name="robots" content="noindex, follow">
+    <script>
+        (function() {
+            var p = decodeURIComponent(window.location.pathname || "").toLowerCase();
+            if (p.indexOf("chi-siamo") !== -1 || p.indexOf("about") !== -1 || p.indexOf("home") !== -1 || p === "/index" || p === "/index.htm") {
+                window.location.replace("https://www.leapidirospocchia.com/");
+            } else if (p.indexOf("tiglio") !== -1) {
+                window.location.replace("https://www.leapidirospocchia.com/millefiori.html");
+            } else if (p.indexOf("shop") !== -1 || p.indexOf("prodott") !== -1 || p.indexOf("miel") !== -1 || p.indexOf("edera") !== -1 || p.indexOf("candel") !== -1 || p.indexOf("caramell") !== -1 || p.indexOf("saponett") !== -1 || p.indexOf("burro") !== -1 || p.indexOf("catalogo") !== -1) {
+                window.location.replace("https://www.leapidirospocchia.com/catalogo.html");
+            } else if (p.indexOf("curiosit") !== -1 || p.indexOf("apiar") !== -1) {
+                window.location.replace("https://www.leapidirospocchia.com/curiosita.html");
+            } else if (p.indexOf("contatt") !== -1 || p.indexOf("dove") !== -1) {
+                window.location.replace("https://www.leapidirospocchia.com/dove_trovarci.html");
+            } else if (p.indexOf("didattic") !== -1 || p.indexOf("scuol") !== -1 || p.indexOf("laborator") !== -1) {
+                window.location.replace("https://www.leapidirospocchia.com/didattica.html");
+            } else if (p.indexOf("premi") !== -1) {
+                window.location.replace("https://www.leapidirospocchia.com/premi.html");
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
-    <link rel="icon" href="images/logo_def.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/favicon.png">
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo"><img src="images/logo_def.svg" alt="Logo Le Api di Rospocchia">Le Api Di Rospocchia</a>
+        <a href="/" class="logo"><img src="/images/logo_def.svg" alt="Logo Le Api di Rospocchia">Le Api Di Rospocchia</a>
         <ul class="navlist">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="curiosita.html">Curiosità</a></li>
-            <li><a href="catalogo.html">Catalogo</a></li>
-      <li><a href="premi.html">Premi</a></li>
-            <li><a href="dove_trovarci.html">Dove trovarci</a></li>
-            <li><a href="didattica.html">Didattica</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/curiosita.html">Curiosità</a></li>
+            <li><a href="/catalogo.html">Catalogo</a></li>
+            <li><a href="/premi.html">Premi</a></li>
+            <li><a href="/dove_trovarci.html">Dove trovarci</a></li>
+            <li><a href="/didattica.html">Didattica</a></li>
         </ul>
         <div id="mobile-menu">
             <span class="bar"></span>
@@ -44,13 +63,13 @@
             La pagina che stai cercando non esiste, è stata spostata o hai digitato male l'indirizzo.<br>
             Torna alla home e riprendi la tua dolce esplorazione!
         </p>
-        <a href="index.html" style="display:inline-block; padding: 15px 40px; background: var(--main-color); color: var(--bg-color); font-size: 1.1rem; font-weight: 700; border-radius: 50px; transition: all 0.3s ease;">
+        <a href="/" style="display:inline-block; padding: 15px 40px; background: var(--main-color); color: var(--bg-color); font-size: 1.1rem; font-weight: 700; border-radius: 50px; transition: all 0.3s ease;">
             <i class='bx bx-home' style="vertical-align:middle; margin-right:8px;"></i>Torna alla Home
         </a>
     </main>
 
     <footer>
-        <p>&copy; 2025 Le Api di Rospocchia. Tutti i diritti riservati. | P.IVA 01234567890 | <a href="privacy.html">Privacy Policy</a></p>
+        <p>&copy; 2025 Le Api di Rospocchia. Tutti i diritti riservati. | P.IVA 01234567890 | <a href="/privacy.html">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
